@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddAircraftDialog</class>
+ <widget class="QDialog" name="AddAircraftDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>431</width>
+    <height>270</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>414</width>
+     <height>235</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_6">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <widget class="QLabel" name="label_15">
+          <property name="text">
+           <string>Модель</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEditModel">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>Скорость</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBoxSpeed">
+              <property name="maximum">
+               <number>9999</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>Дальность</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBoxRange">
+              <property name="maximum">
+               <number>99999</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBoxAircraftType">
+        <item>
+         <property name="text">
+          <string>Пассажирский самолет</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Грузовой самолет</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QStackedWidget" name="stackedWidgetAircraftType">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="page_3">
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QLabel" name="label_3">
+                <property name="text">
+                 <string>Экипаж</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="spinBoxCabinCrew">
+                <property name="maximum">
+                 <number>999</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QLabel" name="label_4">
+                <property name="text">
+                 <string>Пассажиры</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="spinBoxPassCapacity">
+                <property name="maximum">
+                 <number>999</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0">
+           <widget class="QComboBox" name="comboBoxPassAircraftType">
+            <item>
+             <property name="text">
+              <string>Широкофюзеляжный самолет</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Узкофюзеляжный самолет</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QStackedWidget" name="stackedWidgetPassAircraftType">
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="page_5">
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_10">
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_8">
+                    <item>
+                     <widget class="QLabel" name="label_6">
+                      <property name="text">
+                       <string>Количество палуб</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QComboBox" name="comboBoxCountDecks">
+                      <item>
+                       <property name="text">
+                        <string>1</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>2</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>3</string>
+                       </property>
+                      </item>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_9">
+                    <item>
+                     <widget class="QLabel" name="label_7">
+                      <property name="text">
+                       <string>Места 1-го класса</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QSpinBox" name="spinBoxCountFirstClass">
+                      <property name="maximum">
+                       <number>999</number>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_6">
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_13">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_11">
+                  <item>
+                   <widget class="QLabel" name="label_10">
+                    <property name="text">
+                     <string>Количество проходов</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="comboBoxAisleCount">
+                    <item>
+                     <property name="text">
+                      <string>1</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>2</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>3</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_12">
+                  <item>
+                   <widget class="QLabel" name="label_11">
+                    <property name="text">
+                     <string>Бизнес-класс</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="comboBoxBusinessClass">
+                    <item>
+                     <property name="text">
+                      <string>Да</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Нет</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_4">
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_16">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_14">
+              <item>
+               <widget class="QLabel" name="label_13">
+                <property name="text">
+                 <string>Грузоподъемность</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QDoubleSpinBox" name="doubleSpinBoxCargoWeight">
+                <property name="maximum">
+                 <double>9999999.990000000223517</double>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_5">
+                <property name="text">
+                 <string>кг</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_15">
+              <item>
+               <widget class="QLabel" name="label_14">
+                <property name="text">
+                 <string>Объем отсека</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QDoubleSpinBox" name="doubleSpinBoxCargoVolume">
+                <property name="maximum">
+                 <double>99999.990000000005239</double>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_17">
+      <item>
+       <widget class="QPushButton" name="pushButtonCancel">
+        <property name="text">
+         <string>Отмена</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonAdd">
+        <property name="text">
+         <string>Добавить</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButtonCancel</sender>
+   <signal>clicked()</signal>
+   <receiver>AddAircraftDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>120</x>
+     <y>238</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>122</x>
+     <y>283</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
