@@ -9,8 +9,7 @@ protected:
     int Range;
 
 public:
-    Aircraft(const std::string& model, int maxSpeed, int range)
-    : Model(model),MaxSpeed(maxSpeed > 0 ? maxSpeed : 0), Range(range > 0 ? range : 0) {}
+    Aircraft(const std::string& model, int maxSpeed, int range): Model(model), MaxSpeed(maxSpeed > 0 ? maxSpeed : 1), Range(range > 0 ? range : 1) {}
 
     std::string GetModel() const { return Model; }
     int GetMaxSpeed() const { return MaxSpeed; }
