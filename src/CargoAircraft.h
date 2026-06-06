@@ -9,7 +9,7 @@ private:
 
 public:
     CargoAircraft(const std::string& model, int maxSpeed, int range, double maxCargoWeight, double cargoVolumeCapacity)
-    : Aircraft(model, maxSpeed, range), MaxCargoWeight(maxCargoWeight), CargoVolumeCapacity(cargoVolumeCapacity) {}
+    : Aircraft(model, maxSpeed, range), MaxCargoWeight(maxCargoWeight > 0 ? maxCargoWeight : 0), CargoVolumeCapacity(cargoVolumeCapacity > 0 ? cargoVolumeCapacity : 0) {}
 
     double GetMaxCargoWeight() const { return MaxCargoWeight; }
     double GetCargoVolumeCapacity() const { return CargoVolumeCapacity; }

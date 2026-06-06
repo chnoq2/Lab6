@@ -42,31 +42,42 @@ Aircraft* AddAircraftDialog::createAircraft() const {
     int mainType = ui->stackedWidgetAircraftType->currentIndex();
 
     if (mainType == 1) { // грузовой
-        return new CargoAircraft(
-            model, speed, range,
-            ui->doubleSpinBoxCargoWeight->value(),
-            ui->doubleSpinBoxCargoVolume->value()
-            );
-    }
-    else { // пассажирские
-        int subType = ui->stackedWidgetPassAircraftType->currentIndex();
+        double weight = ui->doubleSpinBoxCargoWeight->value();
+        double volume = ui->doubleSpinBoxCargoVolume->value();
 
-        if (subType == 0) { // широкий
-            return new WideBodyAircraft(
-                model, speed, range,
-                ui->spinBoxPassCapacity->value(),
-                ui->spinBoxCabinCrew->value(),
-                ui->comboBoxCountDecks->currentText().toInt(),
-                ui->spinBoxCountFirstClass->value()
-                );
-        } else { // узкий
-            return new NarrowBodyAircraft(
-                model, speed, range,
-                ui->spinBoxPassCapacity->value(),
-                ui->spinBoxCabinCrew->value(),
-                ui->comboBoxAisleCount->currentText().toInt(),
-                ui->comboBoxBusinessClass->currentText() == "Да"
-                );
+        if (weight <= 0) {
+            QMessageBox::warning(nullptr, "Ошибка", "Вес груза должен быть больше 0!");
+            return nullptr;
+        }
+        if (volume <= 0) {
+            QMessageBox::warning(nullptr, "Ошибка", "Объём грузового отсека должен быть больше 0!");
+            return nullptr;
+        }
+
+        return new CargoAircraft(model, speed, range, weight, volume);
+    }
+    else {
+        int passengers = ui->spinBoxPassCapacity->value();
+        int crew = ui->spinBoxCabinCrew->value();
+
+        if (passengers <= 0) {
+            QMessageBox::warning(nullptr, "Ошибка", "Число пассажиров должно быть больше 0!");
+            return nullptr;
+        }
+        if (crew <= 0) {
+            QMessageBox::warning(nullptr, "Ошибка", "Число членов экипажа должно быть больше 0!");
+            return nullptr;
+        }
+
+        int subType = ui->stackedWidgetPassAircraftType->currentIndex();
+        if (subType == 0) {
+            return new WideBodyAircraft(model, speed, range, passengers, crew,
+                                        ui->comboBoxCountDecks->currentText().toInt(),
+                                        ui->spinBoxCountFirstClass->value());
+        } else {
+            return new NarrowBodyAircraft(model, speed, range, passengers, crew,
+                                          ui->comboBoxAisleCount->currentText().toInt(),
+                                          ui->comboBoxBusinessClass->currentText() == "Да");
         }
     }
 }
